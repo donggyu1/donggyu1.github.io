@@ -1,1 +1,6 @@
-<!doctype html><title>Callback</title><p>Authorization received. You can close this page.</p></p></title>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Callback</title></head><body style="font-family:sans-serif;padding:20px">
+<h2>Authorization received</h2><p>아래 전체 주소를 복사해서 입력칸에 붙여 주세요.</p>
+<textarea id="u" rows="8" style="width:100%;font-size:14px" readonly></textarea>
+<p><button id="b" style="font-size:18px;padding:10px 20px">복사하기</button> <span id="m"></span></p>
+<script>var t=document.getElementById('u');t.value=location.href;document.getElementById('b').onclick=function(){t.select();t.setSelectionRange(0,99999);try{navigator.clipboard.writeText(t.value).then(function(){m.textContent='복사됨'},function(){document.execCommand('copy');m.textContent='복사됨'})}catch(e){document.execCommand('copy');m.textContent='복사됨'}};var m=document.getElementById('m');</script>
+</body></html>
